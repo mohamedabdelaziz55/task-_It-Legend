@@ -22,6 +22,12 @@ class HomeBody extends StatelessWidget {
             CustomOffersListView(),
             SizedBox(height: height * 0.03),
             CustomSectionListView(),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                color: AppColors.lightGray,
+              ),
+            )
           ],
         ),
       ),

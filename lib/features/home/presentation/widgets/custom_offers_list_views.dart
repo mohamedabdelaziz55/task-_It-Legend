@@ -1,7 +1,6 @@
-
 import 'package:flutter/material.dart';
-
 import '../../../../core/utils/fonts.dart';
+import '../../../../core/utils/app_colors.dart';
 import '../../data/dummy_data/dummy_offers.dart';
 
 class CustomOffersListView extends StatefulWidget {
@@ -39,15 +38,16 @@ class _CustomOffersListViewState extends State<CustomOffersListView> {
                 padding: EdgeInsets.symmetric(horizontal: width * 0.02),
                 child: Chip(
                   backgroundColor: isSelected
-                      ? Colors.orange.withOpacity(0.12)
+                      ? AppColors.primaryOrange.withOpacity(0.12)
                       : Colors.white,
                   label: Text(
                     dummyOffers[index],
                     style: Styles.textStyle14.copyWith(
-                      color: isSelected ? Colors.orange : Colors.black,
-                      fontWeight: isSelected
-                          ? FontWeight.bold
-                          : FontWeight.normal,
+                      color: isSelected
+                          ? AppColors.primaryOrange
+                          : AppColors.textBlack,
+                      fontWeight:
+                      isSelected ? FontWeight.bold : FontWeight.normal,
                     ),
                   ),
                 ),
